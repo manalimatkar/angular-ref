@@ -1,0 +1,7 @@
+
+<div *ngIf="contentType === 'message'">
+    <app-message [messageContent]="content"></app-message>
+</div>
+<div *ngIf="contentType === 'callbackform'">
+    <app-callback [messageContent]="content" [callbackReason]="reasons"></app-callback>
+</div>

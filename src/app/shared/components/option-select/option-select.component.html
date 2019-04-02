@@ -1,0 +1,10 @@
+<label for="reason">
+  <strong>{{fieldTitle}}</strong>
+</label>
+<div [formGroup]="parentForm">
+    <select formControlName="options" class="form-control" (ngModelChange)="optionSelected($event)">
+      <option value="" disabled selected style="display:none;">Select Option</option>
+      <option *ngFor="let choice of choices" [ngValue]="choice.code">{{choice.option}}
+      </option>
+    </select>
+</div>

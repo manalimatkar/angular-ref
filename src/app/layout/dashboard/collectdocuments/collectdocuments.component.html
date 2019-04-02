@@ -1,0 +1,25 @@
+<!-- <p>
+  collectdocuments works!
+</p> -->
+<form [formGroup]="form" (submit)="submit(form.value)" novalidate>
+  <div class="text-center">      
+      <h3>Collect Documents</h3>
+      <p class="text-danger">* = Required Fields</p>
+  </div>
+  <div class="text-center">
+  <div class="form-group col-md-12">
+      <label for="documents">Documents: </label>
+      <div *ngFor="let doc of documents.controls; let i=index" class="docchekboxs">
+          <input type="checkbox" id={{patient.documents[i].name}} [formControl]="doc" (change)="checkChanged($event)" />{{patient.documents[i].desc}}
+      </div>
+  </div>
+  <!-- Follow up Date Input -->
+  <div class="form-group" *ngIf="showFollowUpDate">
+      <label for="followup"><strong>Followup Date:</strong></label>
+      <input type="date"  class="form-control" id="followup" formControlName="followup"/>        
+  </div>
+  <div class="form-group col-md-12">
+      <button type="submit" class="btn btn-lg btn-primary" [disabled]="!form.valid">Submit</button>
+  </div>
+</div>
+</form>

@@ -1,0 +1,15 @@
+<div [formGroup]="parentForm">
+    <div class="form-group">
+          <label class="cols-sm-2 control-label" for="dob">Birth Date:*</label>
+          <div class="cols-sm-10">
+              <!-- <div class="input-group">
+                 <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>   -->
+                 <input class="form-control" [ngClass]="{
+                    'is-invalid': parentForm.controls.dob.invalid && parentForm.controls.dob.dirty, 
+                    'is-valid': parentForm.controls.dob.valid && parentForm.controls.dob.dirty 
+                  }" type="date" [formControl]="dob"/>
+              <!-- </div> -->
+              <app-controlmessages [control]="parentForm.controls.dob"></app-controlmessages>
+          </div>      
+      </div>
+  </div>

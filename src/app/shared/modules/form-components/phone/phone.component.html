@@ -1,0 +1,10 @@
+<div [formGroup]="parentForm">
+  <div class="form-group">
+    <label class="cols-sm-2 control-label" for="phone">{{label}}:*</label>
+    <div class="cols-sm-10">
+      <input class="form-control" [disableControl]="disabled" [ngClass]="{'is-invalid': phone.invalid && phone.dirty,'is-valid': phone.valid && phone.dirty}"
+       type="phone" placeholder="Enter Phone" [formControlName]="name"/>
+      <app-controlmessages [control]="phone"></app-controlmessages>
+    </div>
+  </div>
+</div>

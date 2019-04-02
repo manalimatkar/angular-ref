@@ -1,0 +1,15 @@
+<div [formGroup]="parentForm">
+    <div class="form-group">
+          <label class="cols-sm-2 control-label" for="email">Email:*</label>
+          <div class="cols-sm-10">
+              <!-- <div class="input-group">
+                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>   -->
+                 <input class="form-control" [disableControl]="disabled" [ngClass]="{
+                    'is-invalid': parentForm.controls.email.invalid && parentForm.controls.email.dirty,
+                    'is-valid': parentForm.controls.email.valid && parentForm.controls.email.dirty
+                  }" type="email" placeholder="Enter Email" [formControl]="email"/>
+              <!-- </div> -->
+              <app-controlmessages [control]="parentForm.controls.email"></app-controlmessages>
+          </div>      
+      </div>
+  </div>

@@ -1,0 +1,14 @@
+<div [formGroup]="parentForm" *ngIf="showphone">
+<div class="form-group mt-3" [ngClass]="{
+  'has-danger': parentForm.controls.phone.invalid && parentForm.controls.phone.dirty, 
+  'has-success': parentForm.controls.phone.valid && parentForm.controls.phone.dirty 
+}">
+  <label for="phone">{{ textLabel }} </label>
+  <input type="text"
+    class="form-control" formControlName="phone" aria-describedby="phonenumber" placeholder="Enter phone">
+    <div class="form-control-feedback" *ngIf="phone.errors && (phone.dirty || phone.touched)">
+      <p *ngIf="phone.errors.required">Phone number is required</p>
+      <p *ngIf="phone.errors.invalidPhoneNumber">Phone needs to be in format xxx-xxx-xxxx</p>
+    </div>
+</div>
+</div>

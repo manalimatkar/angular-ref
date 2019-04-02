@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xl-12">
+        <h2 class="page-header">
+            {{heading}}
+        </h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <i class="fa fa-dashboard"></i> <a [routerLink]="['/dashboard']">{{ 'dashboard' | translate }}</a>
+            </li>
+            <li class="breadcrumb-item active"><i class="fa {{icon}}"></i><a [routerLink]="['', parent.toLowerCase()]"> {{ heading | translate }}</a></li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<ul class="list-group" *ngIf="messageContent">
+  <li *ngFor="let message of messageContent" class="list-group-item" [ngClass]="{'agent': message.type === 'agent', 'note': message.type === 'note' }">
+    <div class="talk-bubble tri-right left-top">
+      <div class="talktext">
+        <p [innerHtml]="message.text"></p>
+      </div>
+      </div>
+  </li>
+</ul>
+

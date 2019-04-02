@@ -1,0 +1,11 @@
+<!-- <p>
+  tasklist works!
+</p> -->
+<ul class="list-group" *ngIf="tasks" class="list-group" style="margin-top: 0px;">
+  <li class="list-group-item" *ngFor="let task of tasks; let i=index"
+    class="list-group-item" [class.active]="i === activeTask">
+      <div>{{ task.wfcontext }}</div>
+      <p>{{ task.description }}</p>
+      <!-- <p>Task {{ task.tasknum }} - Step {{task.stepnum}}</p> -->
+  </li>
+</ul>  

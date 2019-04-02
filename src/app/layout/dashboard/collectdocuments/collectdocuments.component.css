@@ -1,0 +1,8 @@
+.docchekboxs{
+	margin-left: 0px;
+	display: inline-flex;
+	padding: 10px;
+}
+input[type=checkbox]{
+	margin-right: 10px;
+}

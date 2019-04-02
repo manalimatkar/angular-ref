@@ -1,0 +1,54 @@
+li{
+    margin-top: 20px;
+}
+.agent {
+  color: green;
+}
+
+.note {
+  color: red;
+}
+
+.patient {
+  color: grey;
+}
+
+
+/* Right triangle placed top left flush. */
+
+.tri-right.border.left-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.left-top:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+/* talk bubble contents */
+.talktext{
+    padding: 1em;
+      text-align: left;
+    line-height: 1.5em;
+  }
+  .talktext p{
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }

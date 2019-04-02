@@ -1,0 +1,32 @@
+<!-- <p>
+  patientconsent works!
+</p> -->
+<form [formGroup]="myForm" novalidate (ngSubmit)="save()">
+  <div class="col-md-12 text-center">
+    <h3>Collect Documents</h3>
+    <p class="text-danger">* = Required Fields</p>
+  </div>
+  <!-- Call Oucome Dropdown -->
+  <div class="col-md-12">
+    <div class="form-group">
+      <label for="outcome">
+        <strong> Outcome:*</strong>
+      </label>
+      <select formControlName="outcome" id="outcome" class="form-control" (ngModelChange)="updateControls($event)">
+        <option value="" disabled selected style="display:none;">Call Outcome</option>
+        <option *ngFor="let outcome of calloutcome" [ngValue]="outcome.code">{{outcome.text}}
+        </option>
+      </select>
+    </div>
+    <!-- Follow up Date Input -->
+    <div class="form-group" *ngIf="showFollowUpDate">
+      <label for="followup">
+        <strong>Followup Date:</strong>
+      </label>
+      <input type="date" id="followup" formControlName="followup" class="form-control" />
+    </div>
+  </div>
+  <div class="col-md-12 text-center">
+    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!myForm.valid">Submit</button>
+  </div>
+</form>

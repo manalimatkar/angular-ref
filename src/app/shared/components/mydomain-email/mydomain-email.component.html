@@ -1,0 +1,14 @@
+<div [formGroup]="parentForm">
+  <div class="form-group" [ngClass]="{
+    'has-danger': parentForm.controls.mydomainEmail.invalid && parentForm.controls.mydomainEmail.dirty, 
+    'has-success': parentForm.controls.mydomainEmail.valid && parentForm.controls.mydomainEmail.dirty 
+  }">
+    <label for="mydomainEmail">Email: *</label>
+    <input type="email" class="form-control" formControlName="mydomainEmail" id="" placeholder="Enter Email">
+    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+    <div class="form-control-feedback" *ngIf="mydomainEmail.errors && (mydomainEmail.dirty || mydomainEmail.touched)">
+      <p *ngIf="mydomainEmail.errors.required">Email is required</p>
+      <p *ngIf="mydomainEmail.errors.emailDomain">Email must be on the mediasourcery domain</p>
+    </div>
+  </div>
+</div>

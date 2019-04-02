@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+/* Created by Filipe Pina
+ * Specific styles of signin, register, component
+ */
+/*
+ * General styles
+ */
+
+body, html{
+    height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color:#e3e3e3;
+ 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.main{
+ 	margin-top: 30px;
+}
+hr{
+	width: 20%;
+	color: #111111;
+}
+
+.form-group{
+	margin-bottom: 15px;
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+}
+
+.main-login{
+ 	background-color: #999;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    max-width: 60%;
+
+}
+.main-container .liwoborder{
+    background-color: #e3e3e3;
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.main-center{
+ 	margin-top: 20px;
+ 	width: 40%;
+    padding: 40px 40px;
+	/* background-color: #fff; */
+}
+.btn-space{
+    margin : 2px;
+}
+.liwoborder{
+    border: none;
+}
+@media screen and (max-width: 992px) {
+  .push-right .sidebar {
+    left: 235px !important;
+  }
+}
+

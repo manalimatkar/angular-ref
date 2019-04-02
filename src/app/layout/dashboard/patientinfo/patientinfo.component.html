@@ -1,0 +1,17 @@
+<!-- <p>
+  patientinfo works!
+</p> -->
+<div *ngIf="patient">
+  <div class="card">
+    <div class="card-header">Patient Info</div>
+    <div class="card-body">
+      <div class="card-text">
+                <strong>Patient Name : </strong>{{ patient.name }}<br/>                           
+                <strong>Patient ID : </strong>{{ patient.patientid }}<br/>             
+                <strong>Birthday: </strong>{{ patient.dob }} <br/>
+                <strong>Physician Name: </strong>{{ patient.phyName}}<br/>
+                <strong>Physician Contact: </strong>{{ patient.phyPh}} 
+      </div>
+    </div>
+  </div>
+</div>

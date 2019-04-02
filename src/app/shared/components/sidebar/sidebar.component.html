@@ -1,0 +1,41 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+  <ul class="list-group">
+    <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-puzzle-piece"></i>&nbsp;{{ 'Task App Demo' }}
+    </a>
+    <!-- <a [routerLink]="['/dynamic']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-fw fa-magic"></i>&nbsp;{{ 'Dynamic Model' }}
+</a> -->
+
+ <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-puzzle-piece"></i>&nbsp;{{ 'Form Example' }}
+    </a>
+    <!-- <a [routerLink]="['/csdemo']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-fw fa-angellist"></i>&nbsp;{{ 'CS Demo' }}
+</a> -->
+<a [routerLink]="['/dynamicform']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+  <i class="fa fa-fw fa-tasks"></i>&nbsp;{{ 'Dynamic Form Demo' }}
+</a>
+<a [routerLink]="['/nestedform']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+  <i class="fa fa-fw fa-tasks"></i>&nbsp;{{ 'Nested Form Demo' }}
+</a>
+<a [routerLink]="['/todo']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+  <i class="fa fa-fw fa-tasks"></i>&nbsp;{{ 'ToDo App' }}
+</a>
+    <!-- <div class="nested-menu">
+      <a class="list-group-item" (click)="addExpandClass('pages')">
+                <span><i class="fa fa-fw fa-user"></i>&nbsp;{{ 'John Smith' }}</span>
+            </a>
+      <li class="nested" [class.expand]="showMenu === 'pages'">
+        <ul class="submenu">
+          <li>
+            <a href="javascript:void(0)"><span><i class="fa fa-address-card" aria-hidden="true"></i> {{ 'Profile' }}</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/login']" (click)="onLoggedout()"><span><i class="fa fa-fw fa-power-off"></i> {{ 'Logout' }}</span></a>
+          </li>
+        </ul>
+      </li>
+    </div> -->
+  </ul>
+</nav>

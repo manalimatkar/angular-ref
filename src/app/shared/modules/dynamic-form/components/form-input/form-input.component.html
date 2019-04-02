@@ -1,0 +1,9 @@
+<!-- <div class="form-input" [formGroup]="group">
+  <label>{{ config.label }}</label>
+  <input class="form-control" type="text" [attr.placeholder]="config.placeholder" [formControlName]="config.name" />
+</div> -->
+<div class="form-group" [formGroup]="group">
+  <label>{{ config.label }}</label>
+  <input class="form-text" type="text" [attr.placeholder]="config.placeholder" [formControlName]="config.name">
+  <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+</div>

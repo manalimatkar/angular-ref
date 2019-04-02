@@ -1,0 +1,13 @@
+<div [formGroup]="parentForm">
+    <div class="form-group">
+          <label class="cols-sm-2 control-label" for="zipcode">Zipcode:*</label>
+          <div class="cols-sm-10">
+              <!-- <div class="input-group">
+                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>   -->
+                 <input class="form-control" [ngClass]="{'is-invalid': parentForm.controls.zipcode.invalid && parentForm.controls.zipcode.dirty,'is-valid': parentForm.controls.zipcode.valid && parentForm.controls.zipcode.dirty}"
+                  type="text" placeholder="Enter Zipcode" [formControl]="zipcode"/>
+              <!-- </div> -->
+              <app-controlmessages [control]="parentForm.controls.zipcode"></app-controlmessages>
+          </div>      
+      </div>
+  </div>

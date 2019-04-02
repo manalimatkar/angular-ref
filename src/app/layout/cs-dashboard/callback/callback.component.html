@@ -1,0 +1,35 @@
+
+<form [formGroup]="myForm" novalidate (ngSubmit)="save()">
+    <!-- <div class="col-md-12 text-center">
+      <p class="text-danger">* = Required Fields</p>
+    </div>    -->
+    <div class="col-md-12">     
+       <!-- Follow up Date Input -->
+       <div class="form-group" *ngIf="showFollowUpDate">
+          <label for="followup">
+            <strong>Followup Date:</strong>
+          </label>
+          <input type="date" id="followup" formControlName="followup" class="form-control" />
+        </div>
+      <div *ngIf="messageContent">
+          <app-message [messageContent]="messageContent"></app-message>
+      </div><br/>
+       <!-- Call Back Reason Dropdown -->
+       <div class="form-group">
+          <label for="reason">
+            <strong> Callback Reason:*</strong>
+          </label>
+          <select formControlName="reason" id="reason" class="form-control" (ngModelChange)="updateControls($event)">
+            <option value="" disabled selected style="display:none;">Select Reason</option>
+            <option *ngFor="let reason of callbackReason" [ngValue]="reason.code">{{reason.option}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <app-option-select [parentForm]='myForm' [fieldTitle]="'Callback Reason'" [choices]='callbackReason'></app-option-select>
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="!myForm.valid">Submit</button>
+    </div>
+  </form>

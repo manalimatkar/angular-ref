@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-3">
+    <div class="row">	    		
+     <app-patientinfo [patient]="patient"></app-patientinfo>	    		
+    </div>
+    <div class="row">
+         <app-noteshistory [notes]="notesHistory"></app-noteshistory>
+    </div>    		
+  </div>
+  <div class="col-lg-9 col-md-9">          
+       <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+               <div class="card-body">                
+                   <div *ngIf="taskname === 'Collect Documents'">
+                    <app-collectdocuments [context]="wfcontext"  [currentTask]="activeTask" (ontaskcomplete)="updateActiveTask($event)"></app-collectdocuments>
+                   </div>
+                 <div *ngIf="taskname === 'Patient Consent'">
+                   <app-patientconsent [currentTask]="activeTask" (ontaskcomplete)="updateActiveTask($event)"></app-patientconsent>
+                 </div> 
+                </div>  
+            </div> 
+            </div>
+            <div class="col-md-4">                
+                   <app-tasklist [tasks]="taskList" [activeTask]="activeTask"></app-tasklist>
+             </div>
+        </div>                   
+  </div>
+</div>

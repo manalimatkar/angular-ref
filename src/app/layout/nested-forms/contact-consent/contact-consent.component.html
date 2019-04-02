@@ -1,0 +1,8 @@
+<div [formGroup]="parentForm">
+  <div class="form-group" formGroupName="contactConsent">
+    <app-option-select [parentForm]='contactConsent' [fieldTitle]="'Contact Type'" 
+    [choices]='contactType' (selectedOption)="showOption($event)"></app-option-select>
+    <app-phone [parentForm]='contactConsent' [show]="showPhone"></app-phone>
+    <app-email [parentForm]='contactConsent' [show]="showEmail"></app-email> 
+  </div>
+</div>

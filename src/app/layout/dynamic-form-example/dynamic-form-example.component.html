@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-6">
+          <p class="card-text">Dynamic Form</p>
+          <app-dynamic-form
+          [config]="config"
+          #form="appDynamicForm"
+          (submit)="submit($event)">
+        </app-dynamic-form>
+        <span [ngClass]="{'text-danger': !form.valid , 'text-success': form.valid }">Form Status : {{ form.valid }}</span>
+        <br/>
+        <span class="text-info">Form Value :
+          {{ form.value | json }} </span>        
+    </div>
+  </div>
+</div>  

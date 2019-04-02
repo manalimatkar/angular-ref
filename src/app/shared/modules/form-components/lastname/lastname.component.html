@@ -1,0 +1,13 @@
+<div [formGroup]="parentForm">
+        <div class="form-group">
+              <label class="cols-sm-2 control-label" for="lastname"><strong>Last Name:*</strong></label>
+              <div class="cols-sm-10">
+                  <!-- <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>   -->
+                      <input class="form-control" [ngClass]="{'is-invalid': parentForm.controls.lastname.invalid && parentForm.controls.lastname.dirty,'is-valid': parentForm.controls.lastname.valid && parentForm.controls.lastname.dirty}"
+                       type="text" placeholder="Enter Lastname" [formControl]="lastname"/>
+                  <!-- </div> -->
+                  <app-controlmessages [control]="parentForm.controls.lastname"></app-controlmessages>
+              </div>      
+          </div>
+      </div>

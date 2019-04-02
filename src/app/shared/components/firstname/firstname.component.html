@@ -1,0 +1,17 @@
+<div [formGroup]="parentForm">
+  <div class="form-group" [ngClass]="{
+    'has-danger': parentForm.controls.firstname.invalid && parentForm.controls.firstname.dirty, 
+    'has-success': parentForm.controls.firstname.valid && parentForm.controls.firstname.dirty 
+  }">
+    <label class="cols-sm-2 control-label" for="firstname">First Name:*</label>
+    <div class="cols-sm-10">
+      <!-- <div class="input-group">
+               <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>   -->
+      <input class="form-control" type="text" placeholder="Enter Firstname" formControlName="firstname" />
+      <!-- </div> -->
+      <div class="form-control-feedback" *ngIf="firstname.errors && (firstname.dirty || firstname.touched)">
+        <p *ngIf="firstname.errors.required">First Name is required</p>
+      </div>
+    </div>
+  </div>
+</div>
